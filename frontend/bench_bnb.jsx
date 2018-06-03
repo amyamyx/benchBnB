@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Root from './components/root.jsx';
 import configureStore from './store/store';
 
 //just for testing
-import { signup, login, logout } from './util/session_api_util';
+import { signup, login, logout } from './actions/session_actions';
 //
 
 document.addEventListener('DOMContentLoaded', () =>{
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () =>{
   window.dispatch = store.dispatch;
   window.signup = signup;
   window.login = login;
-  window.logout = logout;
+  window.logout =logout;
   
-  ReactDOM.render(<img src="https://iheartdogs.com/wp-content/uploads/2017/01/PoodleStress1.jpg" />, root);
+  ReactDOM.render(<Root store={ store } />, root);
 })

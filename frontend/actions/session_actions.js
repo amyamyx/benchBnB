@@ -5,6 +5,7 @@ export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 export const login =  formUser => dispatch => {
+  console.log("here")
   APIUtil.login( formUser )
          .then( user => dispatch(receiveCurrentUser(user)))
          .fail( errors => dispatch(receiveErrors(errors)))
