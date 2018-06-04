@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+   font-family: 'Tajawal', sans-serif;
+ }
+
+ header a {
+   text-decoration: inherit;
+   padding: 10px 20px;
+   font-weight: bolder;
+   background: tomato;
+   color: white;
+   border-radius: 5px;
+   margin-right: 15px;
+ }
+
+ header a:hover {
+   background: #b54b38;
+ }
+
+ #map-container {
+   height: 500px;
+   width: 500px;
+   border: 5px solid tomato;
+ }
